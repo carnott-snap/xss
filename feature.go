@@ -7,7 +7,7 @@ import (
 
 func Test() {
 	r, _ := http.Get("https://example.com")
-	err := ioutil.ReadAll(r.Body)
+	_, err := ioutil.ReadAll(r.Body)
 	if err != nil {
 		panic(err)
 	}
